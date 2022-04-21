@@ -80,13 +80,11 @@ console.log(filterFor(arr, 3));
 function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
-
 function randomColor() {
-    let newArr = [] 
-    newArr.push(getRandomInteger(0, 255));
-    return newArr;
+    let rgb = getRandomInteger(0, 255);
+    return rgb;
 }
-console.log('rgb(' + randomColor() + ',' + randomColor() + ',' + randomColor() + ")");
+console.log(`rgb( ${randomColor()}, ${randomColor()}, ${randomColor()} )`);
 
 // Задание 8
 // Написать функцию pow(x, n), которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и возвращает результат (!!! решить без оператора **)
@@ -127,12 +125,10 @@ console.log(isInteger(5));
 // "2.5 decimal"
 
 function isInteger(n){
-    if (n % 1 == 0){
         for (let i = 0; i < n; i += 0.5){
             if (i % 1 == 0){
                 console.log('integer');
-            } else {console.log('decimal')}
+            } else {console.log('decimal')
         }
-    }
 }
 console.log(isInteger(4));
